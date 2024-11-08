@@ -15,6 +15,8 @@ import 'package:shared_preferences/shared_preferences.dart' as _i460;
 import '../core/network/api_client.dart' as _i510;
 import '../data/datasources/shared_preferences_data_source.dart' as _i797;
 import '../data/datasources/shared_preferences_module.dart' as _i373;
+import '../data/repositories/base_repository.dart' as _i186;
+import '../domain/respositories/base_repository.dart' as _i140;
 
 extension GetItInjectableX on _i174.GetIt {
 // initializes the registration of main-scope dependencies inside of GetIt
@@ -33,6 +35,7 @@ extension GetItInjectableX on _i174.GetIt {
       preResolve: true,
     );
     gh.lazySingleton<_i510.ApiClient>(() => _i510.ApiClient());
+    gh.factory<_i140.BaseRepository>(() => _i186.BaseRepositoryImpl());
     gh.factory<_i797.TokenSource>(
         () => _i797.SharedPreferencesDataSource(gh<_i460.SharedPreferences>()));
     return this;
