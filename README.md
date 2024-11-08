@@ -8,6 +8,7 @@ This project is a starting point for a Flutter application using Clean Architect
 
 ## Project Structure
 
+```
 lib/
 ├── core/
 │   ├── config/
@@ -51,6 +52,7 @@ lib/
 │       └── common_widgets/        
 │               
 └── main.dart
+```  
 
 ### Core
 
