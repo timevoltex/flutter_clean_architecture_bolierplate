@@ -12,6 +12,7 @@ import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 import 'package:shared_preferences/shared_preferences.dart' as _i460;
 
+import '../core/network/api_client.dart' as _i510;
 import '../data/datasources/shared_preferences_data_source.dart' as _i797;
 import '../data/datasources/shared_preferences_module.dart' as _i373;
 
@@ -31,6 +32,7 @@ extension GetItInjectableX on _i174.GetIt {
       () => sharedPreferencesModule.prefs,
       preResolve: true,
     );
+    gh.lazySingleton<_i510.ApiClient>(() => _i510.ApiClient());
     gh.factory<_i797.TokenSource>(
         () => _i797.SharedPreferencesDataSource(gh<_i460.SharedPreferences>()));
     return this;

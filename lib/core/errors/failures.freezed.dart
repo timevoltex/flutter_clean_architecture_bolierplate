@@ -19,51 +19,63 @@ mixin _$Failure {
   String? get message => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String? message) unAuthenticate,
     required TResult Function(String? message) server,
     required TResult Function(String? message) cache,
     required TResult Function(String? message) cancel,
     required TResult Function(String? message) network,
+    required TResult Function(String? message) unknown,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? message)? unAuthenticate,
     TResult? Function(String? message)? server,
     TResult? Function(String? message)? cache,
     TResult? Function(String? message)? cancel,
     TResult? Function(String? message)? network,
+    TResult? Function(String? message)? unknown,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? message)? unAuthenticate,
     TResult Function(String? message)? server,
     TResult Function(String? message)? cache,
     TResult Function(String? message)? cancel,
     TResult Function(String? message)? network,
+    TResult Function(String? message)? unknown,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(UnAuthtenticateFailure value) unAuthenticate,
     required TResult Function(ServerFailure value) server,
     required TResult Function(CacheFailure value) cache,
     required TResult Function(CancelFailure value) cancel,
     required TResult Function(NetworkFailure value) network,
+    required TResult Function(UnknownFailure value) unknown,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(UnAuthtenticateFailure value)? unAuthenticate,
     TResult? Function(ServerFailure value)? server,
     TResult? Function(CacheFailure value)? cache,
     TResult? Function(CancelFailure value)? cancel,
     TResult? Function(NetworkFailure value)? network,
+    TResult? Function(UnknownFailure value)? unknown,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(UnAuthtenticateFailure value)? unAuthenticate,
     TResult Function(ServerFailure value)? server,
     TResult Function(CacheFailure value)? cache,
     TResult Function(CancelFailure value)? cancel,
     TResult Function(NetworkFailure value)? network,
+    TResult Function(UnknownFailure value)? unknown,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -106,6 +118,178 @@ class _$FailureCopyWithImpl<$Res, $Val extends Failure>
               as String?,
     ) as $Val);
   }
+}
+
+/// @nodoc
+abstract class _$$UnAuthtenticateFailureImplCopyWith<$Res>
+    implements $FailureCopyWith<$Res> {
+  factory _$$UnAuthtenticateFailureImplCopyWith(
+          _$UnAuthtenticateFailureImpl value,
+          $Res Function(_$UnAuthtenticateFailureImpl) then) =
+      __$$UnAuthtenticateFailureImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String? message});
+}
+
+/// @nodoc
+class __$$UnAuthtenticateFailureImplCopyWithImpl<$Res>
+    extends _$FailureCopyWithImpl<$Res, _$UnAuthtenticateFailureImpl>
+    implements _$$UnAuthtenticateFailureImplCopyWith<$Res> {
+  __$$UnAuthtenticateFailureImplCopyWithImpl(
+      _$UnAuthtenticateFailureImpl _value,
+      $Res Function(_$UnAuthtenticateFailureImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of Failure
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(_$UnAuthtenticateFailureImpl(
+      freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UnAuthtenticateFailureImpl implements UnAuthtenticateFailure {
+  const _$UnAuthtenticateFailureImpl([this.message]);
+
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'Failure.unAuthenticate(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UnAuthtenticateFailureImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of Failure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UnAuthtenticateFailureImplCopyWith<_$UnAuthtenticateFailureImpl>
+      get copyWith => __$$UnAuthtenticateFailureImplCopyWithImpl<
+          _$UnAuthtenticateFailureImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String? message) unAuthenticate,
+    required TResult Function(String? message) server,
+    required TResult Function(String? message) cache,
+    required TResult Function(String? message) cancel,
+    required TResult Function(String? message) network,
+    required TResult Function(String? message) unknown,
+  }) {
+    return unAuthenticate(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? message)? unAuthenticate,
+    TResult? Function(String? message)? server,
+    TResult? Function(String? message)? cache,
+    TResult? Function(String? message)? cancel,
+    TResult? Function(String? message)? network,
+    TResult? Function(String? message)? unknown,
+  }) {
+    return unAuthenticate?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? message)? unAuthenticate,
+    TResult Function(String? message)? server,
+    TResult Function(String? message)? cache,
+    TResult Function(String? message)? cancel,
+    TResult Function(String? message)? network,
+    TResult Function(String? message)? unknown,
+    required TResult orElse(),
+  }) {
+    if (unAuthenticate != null) {
+      return unAuthenticate(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(UnAuthtenticateFailure value) unAuthenticate,
+    required TResult Function(ServerFailure value) server,
+    required TResult Function(CacheFailure value) cache,
+    required TResult Function(CancelFailure value) cancel,
+    required TResult Function(NetworkFailure value) network,
+    required TResult Function(UnknownFailure value) unknown,
+  }) {
+    return unAuthenticate(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(UnAuthtenticateFailure value)? unAuthenticate,
+    TResult? Function(ServerFailure value)? server,
+    TResult? Function(CacheFailure value)? cache,
+    TResult? Function(CancelFailure value)? cancel,
+    TResult? Function(NetworkFailure value)? network,
+    TResult? Function(UnknownFailure value)? unknown,
+  }) {
+    return unAuthenticate?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UnAuthtenticateFailure value)? unAuthenticate,
+    TResult Function(ServerFailure value)? server,
+    TResult Function(CacheFailure value)? cache,
+    TResult Function(CancelFailure value)? cancel,
+    TResult Function(NetworkFailure value)? network,
+    TResult Function(UnknownFailure value)? unknown,
+    required TResult orElse(),
+  }) {
+    if (unAuthenticate != null) {
+      return unAuthenticate(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UnAuthtenticateFailure implements Failure {
+  const factory UnAuthtenticateFailure([final String? message]) =
+      _$UnAuthtenticateFailureImpl;
+
+  @override
+  String? get message;
+
+  /// Create a copy of Failure
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$UnAuthtenticateFailureImplCopyWith<_$UnAuthtenticateFailureImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -178,10 +362,12 @@ class _$ServerFailureImpl implements ServerFailure {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String? message) unAuthenticate,
     required TResult Function(String? message) server,
     required TResult Function(String? message) cache,
     required TResult Function(String? message) cancel,
     required TResult Function(String? message) network,
+    required TResult Function(String? message) unknown,
   }) {
     return server(message);
   }
@@ -189,10 +375,12 @@ class _$ServerFailureImpl implements ServerFailure {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? message)? unAuthenticate,
     TResult? Function(String? message)? server,
     TResult? Function(String? message)? cache,
     TResult? Function(String? message)? cancel,
     TResult? Function(String? message)? network,
+    TResult? Function(String? message)? unknown,
   }) {
     return server?.call(message);
   }
@@ -200,10 +388,12 @@ class _$ServerFailureImpl implements ServerFailure {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? message)? unAuthenticate,
     TResult Function(String? message)? server,
     TResult Function(String? message)? cache,
     TResult Function(String? message)? cancel,
     TResult Function(String? message)? network,
+    TResult Function(String? message)? unknown,
     required TResult orElse(),
   }) {
     if (server != null) {
@@ -215,10 +405,12 @@ class _$ServerFailureImpl implements ServerFailure {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(UnAuthtenticateFailure value) unAuthenticate,
     required TResult Function(ServerFailure value) server,
     required TResult Function(CacheFailure value) cache,
     required TResult Function(CancelFailure value) cancel,
     required TResult Function(NetworkFailure value) network,
+    required TResult Function(UnknownFailure value) unknown,
   }) {
     return server(this);
   }
@@ -226,10 +418,12 @@ class _$ServerFailureImpl implements ServerFailure {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(UnAuthtenticateFailure value)? unAuthenticate,
     TResult? Function(ServerFailure value)? server,
     TResult? Function(CacheFailure value)? cache,
     TResult? Function(CancelFailure value)? cancel,
     TResult? Function(NetworkFailure value)? network,
+    TResult? Function(UnknownFailure value)? unknown,
   }) {
     return server?.call(this);
   }
@@ -237,10 +431,12 @@ class _$ServerFailureImpl implements ServerFailure {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(UnAuthtenticateFailure value)? unAuthenticate,
     TResult Function(ServerFailure value)? server,
     TResult Function(CacheFailure value)? cache,
     TResult Function(CancelFailure value)? cancel,
     TResult Function(NetworkFailure value)? network,
+    TResult Function(UnknownFailure value)? unknown,
     required TResult orElse(),
   }) {
     if (server != null) {
@@ -334,10 +530,12 @@ class _$CacheFailureImpl implements CacheFailure {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String? message) unAuthenticate,
     required TResult Function(String? message) server,
     required TResult Function(String? message) cache,
     required TResult Function(String? message) cancel,
     required TResult Function(String? message) network,
+    required TResult Function(String? message) unknown,
   }) {
     return cache(message);
   }
@@ -345,10 +543,12 @@ class _$CacheFailureImpl implements CacheFailure {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? message)? unAuthenticate,
     TResult? Function(String? message)? server,
     TResult? Function(String? message)? cache,
     TResult? Function(String? message)? cancel,
     TResult? Function(String? message)? network,
+    TResult? Function(String? message)? unknown,
   }) {
     return cache?.call(message);
   }
@@ -356,10 +556,12 @@ class _$CacheFailureImpl implements CacheFailure {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? message)? unAuthenticate,
     TResult Function(String? message)? server,
     TResult Function(String? message)? cache,
     TResult Function(String? message)? cancel,
     TResult Function(String? message)? network,
+    TResult Function(String? message)? unknown,
     required TResult orElse(),
   }) {
     if (cache != null) {
@@ -371,10 +573,12 @@ class _$CacheFailureImpl implements CacheFailure {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(UnAuthtenticateFailure value) unAuthenticate,
     required TResult Function(ServerFailure value) server,
     required TResult Function(CacheFailure value) cache,
     required TResult Function(CancelFailure value) cancel,
     required TResult Function(NetworkFailure value) network,
+    required TResult Function(UnknownFailure value) unknown,
   }) {
     return cache(this);
   }
@@ -382,10 +586,12 @@ class _$CacheFailureImpl implements CacheFailure {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(UnAuthtenticateFailure value)? unAuthenticate,
     TResult? Function(ServerFailure value)? server,
     TResult? Function(CacheFailure value)? cache,
     TResult? Function(CancelFailure value)? cancel,
     TResult? Function(NetworkFailure value)? network,
+    TResult? Function(UnknownFailure value)? unknown,
   }) {
     return cache?.call(this);
   }
@@ -393,10 +599,12 @@ class _$CacheFailureImpl implements CacheFailure {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(UnAuthtenticateFailure value)? unAuthenticate,
     TResult Function(ServerFailure value)? server,
     TResult Function(CacheFailure value)? cache,
     TResult Function(CancelFailure value)? cancel,
     TResult Function(NetworkFailure value)? network,
+    TResult Function(UnknownFailure value)? unknown,
     required TResult orElse(),
   }) {
     if (cache != null) {
@@ -490,10 +698,12 @@ class _$CancelFailureImpl implements CancelFailure {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String? message) unAuthenticate,
     required TResult Function(String? message) server,
     required TResult Function(String? message) cache,
     required TResult Function(String? message) cancel,
     required TResult Function(String? message) network,
+    required TResult Function(String? message) unknown,
   }) {
     return cancel(message);
   }
@@ -501,10 +711,12 @@ class _$CancelFailureImpl implements CancelFailure {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? message)? unAuthenticate,
     TResult? Function(String? message)? server,
     TResult? Function(String? message)? cache,
     TResult? Function(String? message)? cancel,
     TResult? Function(String? message)? network,
+    TResult? Function(String? message)? unknown,
   }) {
     return cancel?.call(message);
   }
@@ -512,10 +724,12 @@ class _$CancelFailureImpl implements CancelFailure {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? message)? unAuthenticate,
     TResult Function(String? message)? server,
     TResult Function(String? message)? cache,
     TResult Function(String? message)? cancel,
     TResult Function(String? message)? network,
+    TResult Function(String? message)? unknown,
     required TResult orElse(),
   }) {
     if (cancel != null) {
@@ -527,10 +741,12 @@ class _$CancelFailureImpl implements CancelFailure {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(UnAuthtenticateFailure value) unAuthenticate,
     required TResult Function(ServerFailure value) server,
     required TResult Function(CacheFailure value) cache,
     required TResult Function(CancelFailure value) cancel,
     required TResult Function(NetworkFailure value) network,
+    required TResult Function(UnknownFailure value) unknown,
   }) {
     return cancel(this);
   }
@@ -538,10 +754,12 @@ class _$CancelFailureImpl implements CancelFailure {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(UnAuthtenticateFailure value)? unAuthenticate,
     TResult? Function(ServerFailure value)? server,
     TResult? Function(CacheFailure value)? cache,
     TResult? Function(CancelFailure value)? cancel,
     TResult? Function(NetworkFailure value)? network,
+    TResult? Function(UnknownFailure value)? unknown,
   }) {
     return cancel?.call(this);
   }
@@ -549,10 +767,12 @@ class _$CancelFailureImpl implements CancelFailure {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(UnAuthtenticateFailure value)? unAuthenticate,
     TResult Function(ServerFailure value)? server,
     TResult Function(CacheFailure value)? cache,
     TResult Function(CancelFailure value)? cancel,
     TResult Function(NetworkFailure value)? network,
+    TResult Function(UnknownFailure value)? unknown,
     required TResult orElse(),
   }) {
     if (cancel != null) {
@@ -647,10 +867,12 @@ class _$NetworkFailureImpl implements NetworkFailure {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String? message) unAuthenticate,
     required TResult Function(String? message) server,
     required TResult Function(String? message) cache,
     required TResult Function(String? message) cancel,
     required TResult Function(String? message) network,
+    required TResult Function(String? message) unknown,
   }) {
     return network(message);
   }
@@ -658,10 +880,12 @@ class _$NetworkFailureImpl implements NetworkFailure {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? message)? unAuthenticate,
     TResult? Function(String? message)? server,
     TResult? Function(String? message)? cache,
     TResult? Function(String? message)? cancel,
     TResult? Function(String? message)? network,
+    TResult? Function(String? message)? unknown,
   }) {
     return network?.call(message);
   }
@@ -669,10 +893,12 @@ class _$NetworkFailureImpl implements NetworkFailure {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? message)? unAuthenticate,
     TResult Function(String? message)? server,
     TResult Function(String? message)? cache,
     TResult Function(String? message)? cancel,
     TResult Function(String? message)? network,
+    TResult Function(String? message)? unknown,
     required TResult orElse(),
   }) {
     if (network != null) {
@@ -684,10 +910,12 @@ class _$NetworkFailureImpl implements NetworkFailure {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(UnAuthtenticateFailure value) unAuthenticate,
     required TResult Function(ServerFailure value) server,
     required TResult Function(CacheFailure value) cache,
     required TResult Function(CancelFailure value) cancel,
     required TResult Function(NetworkFailure value) network,
+    required TResult Function(UnknownFailure value) unknown,
   }) {
     return network(this);
   }
@@ -695,10 +923,12 @@ class _$NetworkFailureImpl implements NetworkFailure {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(UnAuthtenticateFailure value)? unAuthenticate,
     TResult? Function(ServerFailure value)? server,
     TResult? Function(CacheFailure value)? cache,
     TResult? Function(CancelFailure value)? cancel,
     TResult? Function(NetworkFailure value)? network,
+    TResult? Function(UnknownFailure value)? unknown,
   }) {
     return network?.call(this);
   }
@@ -706,10 +936,12 @@ class _$NetworkFailureImpl implements NetworkFailure {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(UnAuthtenticateFailure value)? unAuthenticate,
     TResult Function(ServerFailure value)? server,
     TResult Function(CacheFailure value)? cache,
     TResult Function(CancelFailure value)? cancel,
     TResult Function(NetworkFailure value)? network,
+    TResult Function(UnknownFailure value)? unknown,
     required TResult orElse(),
   }) {
     if (network != null) {
@@ -730,5 +962,174 @@ abstract class NetworkFailure implements Failure {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NetworkFailureImplCopyWith<_$NetworkFailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UnknownFailureImplCopyWith<$Res>
+    implements $FailureCopyWith<$Res> {
+  factory _$$UnknownFailureImplCopyWith(_$UnknownFailureImpl value,
+          $Res Function(_$UnknownFailureImpl) then) =
+      __$$UnknownFailureImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String? message});
+}
+
+/// @nodoc
+class __$$UnknownFailureImplCopyWithImpl<$Res>
+    extends _$FailureCopyWithImpl<$Res, _$UnknownFailureImpl>
+    implements _$$UnknownFailureImplCopyWith<$Res> {
+  __$$UnknownFailureImplCopyWithImpl(
+      _$UnknownFailureImpl _value, $Res Function(_$UnknownFailureImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of Failure
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(_$UnknownFailureImpl(
+      freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UnknownFailureImpl implements UnknownFailure {
+  const _$UnknownFailureImpl([this.message]);
+
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'Failure.unknown(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UnknownFailureImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of Failure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UnknownFailureImplCopyWith<_$UnknownFailureImpl> get copyWith =>
+      __$$UnknownFailureImplCopyWithImpl<_$UnknownFailureImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String? message) unAuthenticate,
+    required TResult Function(String? message) server,
+    required TResult Function(String? message) cache,
+    required TResult Function(String? message) cancel,
+    required TResult Function(String? message) network,
+    required TResult Function(String? message) unknown,
+  }) {
+    return unknown(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? message)? unAuthenticate,
+    TResult? Function(String? message)? server,
+    TResult? Function(String? message)? cache,
+    TResult? Function(String? message)? cancel,
+    TResult? Function(String? message)? network,
+    TResult? Function(String? message)? unknown,
+  }) {
+    return unknown?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? message)? unAuthenticate,
+    TResult Function(String? message)? server,
+    TResult Function(String? message)? cache,
+    TResult Function(String? message)? cancel,
+    TResult Function(String? message)? network,
+    TResult Function(String? message)? unknown,
+    required TResult orElse(),
+  }) {
+    if (unknown != null) {
+      return unknown(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(UnAuthtenticateFailure value) unAuthenticate,
+    required TResult Function(ServerFailure value) server,
+    required TResult Function(CacheFailure value) cache,
+    required TResult Function(CancelFailure value) cancel,
+    required TResult Function(NetworkFailure value) network,
+    required TResult Function(UnknownFailure value) unknown,
+  }) {
+    return unknown(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(UnAuthtenticateFailure value)? unAuthenticate,
+    TResult? Function(ServerFailure value)? server,
+    TResult? Function(CacheFailure value)? cache,
+    TResult? Function(CancelFailure value)? cancel,
+    TResult? Function(NetworkFailure value)? network,
+    TResult? Function(UnknownFailure value)? unknown,
+  }) {
+    return unknown?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UnAuthtenticateFailure value)? unAuthenticate,
+    TResult Function(ServerFailure value)? server,
+    TResult Function(CacheFailure value)? cache,
+    TResult Function(CancelFailure value)? cancel,
+    TResult Function(NetworkFailure value)? network,
+    TResult Function(UnknownFailure value)? unknown,
+    required TResult orElse(),
+  }) {
+    if (unknown != null) {
+      return unknown(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UnknownFailure implements Failure {
+  const factory UnknownFailure([final String? message]) = _$UnknownFailureImpl;
+
+  @override
+  String? get message;
+
+  /// Create a copy of Failure
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$UnknownFailureImplCopyWith<_$UnknownFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

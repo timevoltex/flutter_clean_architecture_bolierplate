@@ -1,18 +1,13 @@
-abstract class BaseEntity {
-  const BaseEntity();
+import 'package:equatable/equatable.dart';
+
+abstract class BaseEntity extends Equatable {
+  final int id;
+  final String name;
+
+  const BaseEntity({required this.id, required this.name});
 
   Map<String, dynamic> toJson();
 
-  List<Object?> get props => [];
-
   @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        other is BaseEntity &&
-            runtimeType == other.runtimeType &&
-            props == other.props;
-  }
-
-  @override
-  int get hashCode => props.hashCode;
+  List<Object?> get props => [id, name];
 }
